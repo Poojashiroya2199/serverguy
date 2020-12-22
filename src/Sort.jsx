@@ -9,9 +9,12 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(0),
     minWidth: 80,
-    marginRight: "10px"
+    minHeight: 30,
+    marginRight: "10px",
+    marginTop: 0
   },
   selectEmpty: {
+    height: 30,
     marginTop: theme.spacing(0)
   }
 }));
@@ -19,9 +22,16 @@ export default function Sort({ length }) {
   const classes = useStyles();
 
   const [val1, setval1] = useState("");
-  const [val, setval] = useState("");
-  const handleChange = (event) => {
-    setval1(event.target.value);
+  const [val2, setval2] = useState("");
+  const [val3, setval3] = useState("");
+  const handleChange = (property, event) => {
+    if (property === "val1") {
+      setval1(event.target.value);
+    } else if (property === "val2") {
+      setval2(event.target.value);
+    } else if (property === "val3") {
+      setval3(event.target.value);
+    }
   };
 
   return (
@@ -32,7 +42,7 @@ export default function Sort({ length }) {
           <FormControl className={classes.formControl}>
             <Select
               value={val1}
-              onChange={handleChange}
+              onChange={(event) => handleChange("val1", event)}
               displayEmpty
               className={classes.selectEmpty}
               inputProps={{ "aria-label": "Without label" }}
@@ -52,8 +62,8 @@ export default function Sort({ length }) {
         <div className="sortby">
           <FormControl className={classes.formControl}>
             <Select
-              value={val}
-              onChange={handleChange}
+              value={val2}
+              onChange={(event) => handleChange("val2", event)}
               displayEmpty
               className={classes.selectEmpty}
               inputProps={{ "aria-label": "Without label" }}
@@ -73,8 +83,8 @@ export default function Sort({ length }) {
         <div className="sortby">
           <FormControl className={classes.formControl}>
             <Select
-              value={val}
-              onChange={handleChange}
+              value={val3}
+              onChange={(event) => handleChange("val3", event)}
               displayEmpty
               className={classes.selectEmpty}
               inputProps={{ "aria-label": "Without label" }}

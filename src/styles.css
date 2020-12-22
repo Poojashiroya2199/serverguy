@@ -41,12 +41,12 @@ body {
   padding: 2px;
 }
 .search {
-  width: 950px;
+  width: 700px;
   height: 40px;
   outline: none;
   background-color: white;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 }
 .searchicon {
@@ -58,7 +58,7 @@ body {
   font-size: 2rem;
 }
 .searchby {
-  margin-left: 250px;
+  margin-left: 100px;
   color: grey;
 }
 #search {
@@ -83,7 +83,7 @@ body {
 }
 .titlesort {
   font-size: 20px;
-  padding-top: 20px;
+  padding-top: 0px;
   margin-right: 10px;
 }
 .linkname {
@@ -109,11 +109,33 @@ body {
   font-size: 20px;
   padding-top: 20px;
   margin-right: 10px;
-  margin-left: 620px;
+  margin-left: 420px;
 }
 .pagination {
+  position: absolute;
+  bottom: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 20%;
+  margin-bottom: 5px;
+}
+.footer {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.desnews {
+  font-size: 20px;
+}
+.features {
+  display: flex;
+  margin-left: 20px;
+}
+.feature {
+  margin-right: 5px;
+  text-decoration: none;
+  color: black;
 }

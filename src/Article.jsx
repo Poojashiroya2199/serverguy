@@ -18,27 +18,31 @@ export default function Article({ list }) {
               </a>
             </div>
             <div className="comments">
-              <a className="link" href={el.points}>
+              <Link className="link" to="/description">
                 {el.points} points{" "}
-              </a>{" "}
+              </Link>{" "}
               |
-              <a className="link" href={el.company}>
+              <Link className="link" to="/description">
                 {el.company}{" "}
-              </a>{" "}
+              </Link>{" "}
               |
-              <a className="link" href={el.time}>
+              <Link className="link" to="/description">
                 {el.time}
-              </a>{" "}
+              </Link>{" "}
               |
-              <a className="link" href={el.comments}>
+              <Link className="link" to="/description">
                 {el.comments} comments{" "}
-              </a>
+              </Link>
             </div>
           </article>
         ))}
       </div>
       <div className="pagination">
         <Pagination1 length={len} />
+        <footer className="footer">
+          About | Setting | Help | API Documentation | Hacker News |
+          Fork/Contibute | Cool Apps
+        </footer>
       </div>
     </>
   );
