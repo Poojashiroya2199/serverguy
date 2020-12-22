@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Headerdes() {
+export default function Headerdes(props) {
+  const { handleLogout } = props;
+
   return (
     <>
       <div className="appbar">
@@ -15,6 +17,7 @@ export default function Headerdes() {
           <Link className="feature">Jobs |</Link>
           <Link className="feature">Submit</Link>
         </div>
+        <button onClick={handleLogout}>Logout</button>
       </div>
     </>
   );

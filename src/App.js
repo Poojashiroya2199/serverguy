@@ -9,7 +9,10 @@ export default function App() {
     <div>
       <Switch>
         <Route path="/login" component={Login} />
-        <Route path="/home" component={Home} />
+        <Route
+          path="/home"
+          render={(props) => <Home display={true} {...props} />}
+        />
         <Route path="/description" component={Description} />
         <Redirect to="/home" />
       </Switch>
